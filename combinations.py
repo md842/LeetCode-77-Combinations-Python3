@@ -36,7 +36,7 @@ def combine(n: int, k: int) -> list[list[int]]:
         pos -= 1 # Backtrack to the previous item in the list
         if (sub_list[pos] < (n + pos + 1)): # Check if it's at its maximum
             # (The maximum is based on its position in the list)
-            sub_list[pos] += 1 # If yes, increment it
+            sub_list[pos] += 1 # If not, increment it
             for i in range(pos + 1, 0): # Reset rest of list accordingly
                 sub_list[i] = sub_list[pos] + i - pos
             out_list.append([*sub_list])
